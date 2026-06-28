@@ -82,7 +82,7 @@ export default function About() {
             </div>
 
             <a
-              href="/Mathusan Manivannan _CV v2.pdf"
+              href="/Mathusan-Manivannan-CV-v2.pdf"
               download
               className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-full bg-accent text-dark font-semibold text-sm hover:bg-highlight transition-colors duration-200"
             >

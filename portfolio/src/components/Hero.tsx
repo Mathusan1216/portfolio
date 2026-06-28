@@ -115,7 +115,7 @@ export default function Hero() {
               Hire Me
             </a>
             <a
-              href="/Mathusan Manivannan _CV v2.pdf"
+              href="/Mathusan-Manivannan-CV-v2.pdf"
               download
               className="px-8 py-3 rounded-full border border-body/40 text-body font-semibold text-sm hover:border-accent hover:text-accent transition-colors duration-200"
             >
