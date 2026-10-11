@@ -11,60 +11,60 @@ const categories = [
       </svg>
     ),
     skills: [
-      { name: "Python", level: 90 },
-      { name: "SQL", level: 85 },
-      { name: "R", level: 75 },
-      { name: "JavaScript", level: 60 },
+      { name: "Python", level: 85 },
+      { name: "SQL", level: 75 },
+      { name: "JavaScript", level: 70 },
+      { name: "Java", level: 65 },
     ],
   },
   {
-    title: "Machine Learning",
+    title: "Machine Learning & AI",
     icon: (
       <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21a48.309 48.309 0 01-8.135-.687c-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
       </svg>
     ),
     skills: [
-      { name: "Scikit-learn", level: 88 },
-      { name: "XGBoost / LightGBM", level: 85 },
-      { name: "TensorFlow / Keras", level: 80 },
-      { name: "PyTorch", level: 72 },
+      { name: "Scikit-learn", level: 80 },
+      { name: "Random Forest / XGBoost", level: 78 },
+      { name: "SVM / KNN / Logistic Regression", level: 75 },
+      { name: "Recommendation Systems", level: 70 },
     ],
   },
   {
-    title: "Data Analysis",
+    title: "Data & Analytics",
     icon: (
       <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
       </svg>
     ),
     skills: [
-      { name: "Pandas / NumPy", level: 92 },
-      { name: "Plotly / Seaborn", level: 88 },
-      { name: "Tableau", level: 75 },
-      { name: "Apache Spark", level: 60 },
+      { name: "Pandas / NumPy", level: 85 },
+      { name: "Exploratory Data Analysis", level: 82 },
+      { name: "Feature Engineering", level: 78 },
+      { name: "Matplotlib", level: 75 },
     ],
   },
   {
-    title: "Tools & Platforms",
+    title: "Web, Databases & Tools",
     icon: (
       <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l5.654-4.654m5.887-5.657l4.654-5.654a2.548 2.548 0 013.586 3.586L14.42 11.42" />
       </svg>
     ),
     skills: [
-      { name: "Jupyter / VS Code", level: 95 },
-      { name: "Git / GitHub", level: 85 },
-      { name: "Docker", level: 68 },
-      { name: "AWS / GCP", level: 60 },
+      { name: "React.js", level: 75 },
+      { name: "REST APIs", level: 75 },
+      { name: "MySQL / PostgreSQL / MongoDB", level: 70 },
+      { name: "Git / GitHub", level: 80 },
     ],
   },
 ];
 
 const badges = [
-  "Statistics", "Linear Algebra", "Probability", "A/B Testing",
-  "Feature Engineering", "Model Deployment", "REST APIs", "ETL Pipelines",
-  "Data Cleaning", "EDA", "Hypothesis Testing", "Deep Learning",
+  "Probability", "Hypothesis Testing", "Confidence Intervals",
+  "Statistical Distributions", "Data Cleaning", "Classification",
+  "Django", "Node.js / Express", "Postman", "Netlify", "Railway", "Jupyter",
 ];
 
 function SkillBar({ name, level, animated }: { name: string; level: number; animated: boolean }) {

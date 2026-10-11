@@ -2,54 +2,66 @@
 
 import { useRef, useState } from "react";
 
-const projects = [
+type Project = {
+  title: string;
+  subtitle?: string;
+  description: string;
+  tags: string[];
+  github?: string;
+  demo?: string;
+};
+
+const projects: Project[] = [
   {
-    title: "Customer Churn Prediction",
+    title: "StaySync AI",
+    subtitle: "Smart Student Living Platform",
     description:
-      "Binary classification using XGBoost and LightGBM to predict telecom customer churn with 94% AUC-ROC. SHAP values used for model explainability.",
-    tags: ["Python", "XGBoost", "SHAP", "Pandas", "Scikit-learn"],
-    github: "https://github.com",
-    demo: null,
+      "A smart student living platform for discovering accommodation and managing living expenses. Combines hostel and room search with filtering, restaurant and food discovery, food ordering, delivery tracking, and multiple user dashboards. AI features include a room recommendation engine, similarity-based restaurant matching, and a budget-aware, constraint-based meal planner. SLIIT team project.",
+    tags: [
+      "React Native",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Python",
+      "Scikit-learn",
+      "Recommendation System",
+      "REST API",
+    ],
+    github: "https://github.com/IT24100268/StaySync_AI",
   },
   {
-    title: "NLP Sentiment Analyser",
+    title: "Full-Stack POS & Student Order System",
     description:
-      "Fine-tuned a BERT model for multi-class sentiment analysis on 100K product reviews, achieving 92% accuracy and deployed as a REST API.",
-    tags: ["Python", "BERT", "HuggingFace", "FastAPI", "PyTorch"],
-    github: "https://github.com",
-    demo: "https://demo.example.com",
+      "A full-stack point-of-sale and ordering system built for a real client to manage food ordering and day-to-day business operations. Covers product and menu management, customer and student orders, CRUD workflows, and a user-facing ordering flow backed by a relational database and REST API.",
+    tags: ["React", "Django", "Python", "PostgreSQL", "REST API", "Full Stack"],
+    github: "https://github.com/IT24100268/Cafe-Lush",
   },
   {
-    title: "Sales Time-Series Forecasting",
+    title: "Student Stress Level Predictor",
     description:
-      "Compared ARIMA, Prophet, and LSTM on retail sales data. Reduced MAPE by 23% over baseline with an ensemble of all three models.",
-    tags: ["Python", "Prophet", "TensorFlow", "Time Series"],
-    github: "https://github.com",
-    demo: null,
+      "Machine learning project that predicts student stress levels from academic, lifestyle, and personal factors such as study habits, sleep, physical activity, social media usage, assignments, finances, caffeine, part-time work, CGPA, and commute time. Explored Logistic Regression, KNN, Decision Tree, SVM, Random Forest, and Gradient Boosting with full preprocessing, feature engineering, and model evaluation.",
+    tags: [
+      "Python",
+      "Machine Learning",
+      "Scikit-learn",
+      "Pandas",
+      "NumPy",
+      "Classification",
+    ],
   },
   {
-    title: "House Price Prediction",
+    title: "Fake Job Posting Detector",
     description:
-      "Kaggle competition entry. Placed in the top 5% with stacked regressors and extensive feature engineering on the Ames Housing dataset.",
-    tags: ["Python", "Scikit-learn", "XGBoost", "Feature Eng."],
-    github: "https://github.com",
-    demo: null,
-  },
-  {
-    title: "COVID-19 Data Dashboard",
-    description:
-      "Interactive Plotly Dash dashboard visualising global COVID-19 trends using live data from the Johns Hopkins CSSE dataset.",
-    tags: ["Python", "Plotly", "Dash", "Pandas", "REST API"],
-    github: "https://github.com",
-    demo: "https://demo.example.com",
-  },
-  {
-    title: "Medical Image Classification",
-    description:
-      "Custom CNN trained from scratch and fine-tuned ResNet-50 for classifying chest X-ray images as normal/pneumonia. 96% test accuracy.",
-    tags: ["Python", "TensorFlow", "CNN", "Computer Vision"],
-    github: "https://github.com",
-    demo: null,
+      "Data science project that classifies job postings as legitimate or potentially fraudulent. Applies data preprocessing, text and feature engineering, and machine learning classification to surface fraud signals in job listings, with evaluation focused on the imbalance between genuine and fake postings.",
+    tags: [
+      "Python",
+      "Machine Learning",
+      "Data Science",
+      "NLP",
+      "Classification",
+      "Pandas",
+      "Scikit-learn",
+    ],
   },
 ];
 
@@ -62,7 +74,7 @@ export default function Projects() {
   );
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
-  const maxIndex = projects.length - VISIBLE;
+  const maxIndex = Math.max(0, projects.length - VISIBLE);
 
   function handlePrev() {
     setCurrent((c) => Math.max(0, c - 1));
@@ -94,7 +106,10 @@ export default function Projects() {
     });
   }
 
-  const visibleIndices = Array.from({ length: VISIBLE }, (_, i) => current + i);
+  const visibleIndices = Array.from(
+    { length: Math.min(VISIBLE, projects.length) },
+    (_, i) => current + i
+  );
 
   return (
     <section id="projects" className="py-28 bg-dark">
@@ -119,8 +134,9 @@ export default function Projects() {
           {/* Right: description + nav arrows */}
           <div className="flex-1 flex flex-col gap-6">
             <p className="text-muted leading-relaxed">
-              A selection of data science and machine learning projects built to
-              solve real-world problems with clean, reproducible code.
+              A selection of machine learning, data science, and full-stack
+              projects built to solve real-world problems, from academic work to
+              a system delivered for a live client.
             </p>
             <div className="flex items-center gap-3">
               <button
@@ -152,6 +168,7 @@ export default function Projects() {
           {visibleIndices.map((projectIdx) => {
             const p = projects[projectIdx];
             const img = images[projectIdx];
+            const hasLinks = Boolean(p.github || p.demo);
 
             return (
               <article
@@ -203,10 +220,15 @@ export default function Projects() {
 
                 {/* Card body */}
                 <div className="flex flex-col flex-1 p-5">
-                  <h3 className="text-body font-semibold text-base mb-2 group-hover:text-highlight transition-colors">
+                  <h3 className="text-body font-semibold text-base group-hover:text-highlight transition-colors">
                     {p.title}
                   </h3>
-                  <p className="text-muted text-sm leading-relaxed flex-1 mb-4">
+                  {p.subtitle && (
+                    <p className="text-accent text-xs font-mono mt-0.5">
+                      {p.subtitle}
+                    </p>
+                  )}
+                  <p className="text-muted text-sm leading-relaxed flex-1 mt-2 mb-4">
                     {p.description}
                   </p>
 
@@ -222,19 +244,21 @@ export default function Projects() {
                     ))}
                   </div>
 
-                  {/* Links */}
-                  <div className="flex items-center gap-4 pt-4 border-t border-white/5">
-                    <a
-                      href={p.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-muted hover:text-highlight text-sm transition-colors"
-                    >
-                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
-                      </svg>
-                      Code
-                    </a>
+                  {/* Links — only rendered when a real URL exists */}
+                  <div className="flex items-center gap-4 pt-4 border-t border-white/5 min-h-[2.75rem]">
+                    {p.github && (
+                      <a
+                        href={p.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-muted hover:text-highlight text-sm transition-colors"
+                      >
+                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                        </svg>
+                        Code
+                      </a>
+                    )}
                     {p.demo && (
                       <a
                         href={p.demo}
@@ -248,6 +272,11 @@ export default function Projects() {
                         Live Demo
                       </a>
                     )}
+                    {!hasLinks && (
+                      <span className="text-muted/60 text-xs font-mono">
+                        Academic project · code available on request
+                      </span>
+                    )}
                   </div>
                 </div>
               </article>
@@ -258,7 +287,7 @@ export default function Projects() {
         {/* Bottom CTA */}
         <div className="text-center mt-14">
           <a
-            href="https://github.com"
+            href="https://github.com/Mathusan1216"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-3 border border-accent text-accent font-semibold text-sm hover:bg-accent hover:text-dark transition-all duration-200"

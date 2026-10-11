@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mathusan Manivannan | Data Engineering Portfolio</title>
+  <meta name="description" content="Mathusan Manivannan — Data Science undergraduate at SLIIT and aspiring data engineer building end-to-end pipelines with Python, SQL, PySpark, Airflow, and Azure.">
+  <meta name="theme-color" content="#060B18">
+  <meta property="og:title" content="Mathusan Manivannan | Data Engineering Portfolio">
+  <meta property="og:description" content="Data Science undergraduate and aspiring data engineer building reliable, scalable data pipelines.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/energy-960.webp">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=6">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- SVG sprite: icons referenced with <use href="#i-..."> -->
+  <svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.5 9.5 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></g></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 3h3.3a1 1 0 0 1 .95.68l1.5 4.5a1 1 0 0 1-.5 1.21l-2.26 1.13a11 11 0 0 0 5.52 5.52l1.13-2.26a1 1 0 0 1 1.2-.5l4.5 1.5a1 1 0 0 1 .68.95V19a2 2 0 0 1-2 2h-1C9.72 21 3 14.28 3 6V5a2 2 0 0 1 2-2Z"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m0 0-5.5-5.5M19 12l-5.5 5.5"/></symbol>
+      <symbol id="i-external" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6m0-6-9 9M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"/></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></g></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m8 7-5 5 5 5m8-10 5 5-5 5M14 4l-4 16"/></symbol>
+      <symbol id="i-pipeline" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="6" height="5" rx="1.2"/><rect x="15.5" y="4" width="6" height="5" rx="1.2"/><rect x="9" y="15" width="6" height="5" rx="1.2"/><path d="M8.5 6.5h7M18.5 9v3.5H12V15M5.5 9v3.5H12"/></g></symbol>
+      <symbol id="i-cloud" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 19a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 9.5a4.75 4.75 0 0 1-.5 9.5H7Z"/></symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 20V10m5.33 10V4m5.34 16v-7M20 20V8M3 20h18"/></symbol>
+      <symbol id="i-db" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v13c0 1.55 3.36 2.8 7.5 2.8s7.5-1.25 7.5-2.8v-13M4.5 12c0 1.55 3.36 2.8 7.5 2.8s7.5-1.25 7.5-2.8"/></g></symbol>
+      <symbol id="i-tools" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-3-3 6.5-6.5M9.3 17.7 4 23M3 3l6 6m-2.5-6.5 3 3-3 3-3-3 3-3Z"/></symbol>
+      <symbol id="i-cap" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5M22 9v6"/></g></symbol>
+      <symbol id="i-building" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16M16 9h2a2 2 0 0 1 2 2v10M2 21h20"/><path d="M8 7h4M8 11h4M8 15h4"/></g></symbol>
+      <symbol id="i-target" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></g></symbol>
+      <symbol id="i-rocket" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4c3-1.5 6-1 6-1s.5 3-1 6l-6.5 6.5-5-5L14 4Z"/><path d="M7.5 10.5 4 10l3-4h5M13.5 16.5l.5 3.5 4-3v-5M6 18l-2 2"/><circle cx="15.5" cy="8.5" r="1.3"/></g></symbol>
+      <symbol id="i-ingest" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="7" ry="2.5"/><path d="M5 5v6c0 1.38 3.13 2.5 7 2.5s7-1.12 7-2.5V5"/><path d="M12 16v6m0 0-3-3m3 3 3-3"/></g></symbol>
+      <symbol id="i-clean" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h18l-7 8.5V19l-4 2v-8.5L3 4Z"/></g></symbol>
+      <symbol id="i-model" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8.5" y="9" width="7" height="6" rx="1"/><rect x="2" y="2.5" width="5" height="4" rx="1"/><rect x="17" y="2.5" width="5" height="4" rx="1"/><rect x="2" y="17.5" width="5" height="4" rx="1"/><rect x="17" y="17.5" width="5" height="4" rx="1"/><path d="M7 6.5 8.5 9M17 6.5 15.5 9M7 17.5 8.5 15M17 17.5 15.5 15"/></g></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></g></symbol>
+      <symbol id="i-dashboard" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="3.5" width="19" height="13" rx="2"/><path d="M8 21h8M12 16.5V21M6.5 12.5l3-3 2.5 2 5-4.5"/></g></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+      <symbol id="i-gear" viewBox="0 0 24 24"><path fill="currentColor" d="M13.6 2l.5 2.6c.6.2 1.2.5 1.7.9l2.5-.9 1.6 2.8-2 1.7c.1.6.1 1.3 0 1.9l2 1.7-1.6 2.8-2.5-.9c-.5.4-1.1.7-1.7.9l-.5 2.6h-3.2l-.5-2.6c-.6-.2-1.2-.5-1.7-.9l-2.5.9-1.6-2.8 2-1.7a6 6 0 0 1 0-1.9l-2-1.7 1.6-2.8 2.5.9c.5-.4 1.1-.7 1.7-.9l.5-2.6h3.2ZM12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z" transform="translate(0 1)"/></symbol>
+      <symbol id="i-chart-fill" viewBox="0 0 24 24"><g fill="currentColor"><rect x="3" y="13" width="4.5" height="8" rx="1"/><rect x="9.75" y="8" width="4.5" height="13" rx="1"/><rect x="16.5" y="3" width="4.5" height="18" rx="1"/></g></symbol>
+      <symbol id="i-bulb" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-4 12.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26A7 7 0 0 0 12 2Z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M9.5 20.5h5M10.5 23h3"/></symbol>
+      <symbol id="i-folder" viewBox="0 0 24 24"><path fill="currentColor" d="M3 6.5A2.5 2.5 0 0 1 5.5 4h3.6c.6 0 1.2.24 1.6.66L12.1 6H18.5A2.5 2.5 0 0 1 21 8.5v9a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5v-11Z"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/></g><g fill="currentColor"><rect x="6.5" y="13" width="2.5" height="2.5" rx=".5"/><rect x="10.75" y="13" width="2.5" height="2.5" rx=".5"/><rect x="15" y="13" width="2.5" height="2.5" rx=".5"/><rect x="6.5" y="16.8" width="2.5" height="2.5" rx=".5"/><rect x="10.75" y="16.8" width="2.5" height="2.5" rx=".5"/></g></symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m9 5 7 7-7 7"/></symbol>
+      <symbol id="i-team" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="12" cy="7" r="3.2"/><circle cx="5" cy="9" r="2.4"/><circle cx="19" cy="9" r="2.4"/><path d="M6.5 20c0-3.6 2.5-6.3 5.5-6.3s5.5 2.7 5.5 6.3H6.5Z"/><path d="M1 19c0-2.6 1.6-4.6 3.8-4.6.8 0 1.5.2 2.1.6A8.4 8.4 0 0 0 5 19H1ZM23 19c0-2.6-1.6-4.6-3.8-4.6-.8 0-1.5.2-2.1.6A8.4 8.4 0 0 1 19 19h4Z"/></g></symbol>
+      <symbol id="i-grid" viewBox="0 0 24 24"><g fill="currentColor"><rect x="2" y="3" width="6" height="5" rx="1"/><rect x="9" y="3" width="6" height="5" rx="1"/><rect x="16" y="3" width="6" height="5" rx="1"/><rect x="2" y="9.5" width="6" height="5" rx="1"/><rect x="9" y="9.5" width="6" height="5" rx="1"/><rect x="16" y="9.5" width="6" height="5" rx="1"/><rect x="2" y="16" width="6" height="5" rx="1"/><rect x="9" y="16" width="6" height="5" rx="1"/><rect x="16" y="16" width="6" height="5" rx="1"/></g></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M5 3.5 20.5 12 5 20.5l4-8.5-4-8.5Z"/><path fill="#8EC3FF" d="M5 3.5 9 12l-4 8.5V3.5Z" opacity=".55"/></symbol>
+      <symbol id="i-cloud-fill" viewBox="0 0 24 24"><path fill="currentColor" d="M7 19a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 9.5a4.75 4.75 0 0 1-.5 9.5H7Z"/></symbol>
+      <symbol id="i-uni" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M3 9 12 4l9 5H3ZM5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 21h18M4 18h16"/><path d="M10 13.5v-2h4v2a2 2 0 0 1-4 0Z"/></g></symbol>
+      <symbol id="i-award" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 8 5-3 5 3-1.5-8"/></g></symbol>
+      <symbol id="i-briefcase" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></g></symbol>
+      <!-- Skills: line icons -->
+    <symbol id="i-db-gear" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="10" cy="5" rx="7" ry="2.6"/><path d="M3 5v12c0 1.44 3.13 2.6 7 2.6M17 5v5M3 11c0 1.44 3.13 2.6 7 2.6"/><circle cx="18" cy="17.5" r="2.2"/><path d="M18 13.3v1.4M18 20.3v1.4M13.8 17.5h1.4M20.8 17.5h1.4M15 14.5l1 1M20 19.5l1 1M15 20.5l1-1M20 15.5l1-1"/></g></symbol>
+    <symbol id="i-broom" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v8M7.5 10h9l3 6H4.5l3-6Z"/><path d="M4.5 16 3 21h18l-1.5-5M9 16.5 8.5 21M15 16.5l.5 4.5M12 16.5V21"/></g></symbol>
+    <symbol id="i-check-circle" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="m7.5 12.3 3 3 6-6.3"/></g></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="5" r="2.5"/><circle cx="19" cy="12" r="2.5"/><circle cx="5" cy="19" r="2.5"/><path d="M7.5 5H14a3.5 3.5 0 0 1 0 7H10a3.5 3.5 0 0 0 0 7h6.5M16.5 12H14"/></g></symbol>
+    <symbol id="i-warehouse" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5 12 3l10 6.5V21H2V9.5Z"/><path d="M6 21v-9h12v9M6 15h12M6 18h12"/></g></symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5v10l-9 5-9-5V7l9-5Z"/><path d="m3 7 9 5 9-5M12 12v10"/></g></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76Z"/></symbol>
+    <!-- Skills: brand logos -->
+    <linearGradient id="g-py" x1="0" y1="0" x2="1" y2="1"><stop offset=".5" stop-color="#3D7EBF"/><stop offset=".5" stop-color="#FFD43B"/></linearGradient>
+    <linearGradient id="g-sql" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5AB0FF"/><stop offset="1" stop-color="#1668D9"/></linearGradient>
+    <linearGradient id="g-az" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#50B4FF"/><stop offset="1" stop-color="#0063C6"/></linearGradient>
+    <symbol id="b-python" viewBox="0 0 24 24"><path fill="url(#g-py)" d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.770l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.060H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></symbol>
+    <symbol id="b-sql" viewBox="0 0 24 24"><g fill="url(#g-sql)"><ellipse cx="12" cy="5" rx="8.5" ry="3"/><path d="M3.5 7.2c1.4 1.4 4.7 2.3 8.5 2.3s7.1-.9 8.5-2.3v4.3c0 1.66-3.8 3-8.5 3s-8.5-1.34-8.5-3V7.2Z"/><path d="M3.5 13.7c1.4 1.4 4.7 2.3 8.5 2.3s7.1-.9 8.5-2.3V19c0 1.66-3.8 3-8.5 3s-8.5-1.34-8.5-3v-5.3Z"/></g></symbol>
+    <symbol id="b-spark" viewBox="0 0 24 24"><path fill="#E8682A" d="M10.812 0c-.425.013-.845.215-1.196.605a3.593 3.593 0 00-.493.722c-.355.667-.425 1.415-.556 2.143a551.9 551.9 0 00-.726 4.087c-.027.16-.096.227-.244.273C5.830 8.386 4.06 8.94 2.3 9.514c-.387.125-.773.289-1.114.506-1.042.665-1.196 1.753-.415 2.710.346.422.79.715 1.284.936 1.1.49 2.202.976 3.3 1.470.019.01.036.013.053.019h-.004l1.306.535c0 .023.002.045 0 .073-.2 2.03-.39 4.063-.58 6.095-.04.419-.012.831.134 1.230.317.87 1.065 1.148 1.881.701.372-.204.666-.497.937-.818 1.372-1.623 2.746-3.244 4.113-4.872.111-.133.205-.15.363-.098.349.117.697.231 1.045.347h.001c.02.012.045.02.073.03l.142.042c1.248.416 2.68.775 3.929 1.190.4.132.622.164 1.045.098.311-.048.592-.062.828-.236.602-.33.995-.957.988-1.682-.005-.427-.154-.813-.35-1.186-.82-1.556-1.637-3.113-2.461-4.666-.078-.148-.076-.243.037-.375 1.381-1.615 2.756-3.236 4.133-4.855.272-.32.513-.658.653-1.058.308-.878-.09-1.57-1-1.741a2.783 2.783 0 00-1.235.069c-1.974.521-3.947 1.041-5.918 1.570-.175.047-.26.015-.355-.144a353.08 353.08 0 00-2.421-4.018 4.61 4.61 0 00-.652-.849c-.371-.37-.802-.549-1.227-.536zm.172 3.703a.592.592 0 01.189.211c.87 1.446 1.742 2.89 2.609 4.338.07.118.135.16.277.121 1.525-.41 3.052-.813 4.579-1.217.367-.098.735-.193 1.103-.289a.399.399 0 01-.1.2c-1.259 1.48-2.516 2.962-3.779 4.438-.11.13-.12.22-.04.37.937 1.803 1.768 3.309 2.498 4.760l-3.696-1.019c-.538-.18-1.077-.358-1.615-.539-.163-.055-.25-.03-.36.1-1.248 1.488-2.504 2.97-3.759 4.454a.398.398 0 01-.18.132c.035-.378.068-.757.104-1.136.149-1.572.297-3.144.451-4.716-.03-.318.117-.405-.322-.545-1.493-.593-3.346-1.321-4.816-1.905a.595.595 0 01.24-.134c1.797-.57 3.595-1.14 5.394-1.705.127-.04.199-.092.211-.233.013-.148.05-.294.076-.441.241-1.363.483-2.726.726-4.088.068-.386.14-.771.21-1.157z"/></symbol>
+    <symbol id="b-mysql" viewBox="13 -.3 11.4 13.8"><path fill="#F29111" d="M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.18.214.273.054.107.1.214.154.32l.014-.015c.094-.066.14-.172.14-.333-.04-.047-.046-.094-.08-.14-.04-.067-.126-.1-.18-.153zM23.224 11.311c-.535-.014-.95.04-1.297.188-.1.04-.26.04-.274.167.055.053.063.14.11.214.08.134.218.313.346.407.14.11.28.216.427.31.26.16.555.255.81.416.145.094.293.213.44.313.073.05.12.14.214.172v-.02c-.046-.06-.06-.147-.105-.214-.067-.067-.134-.127-.2-.193a3.223 3.223 0 00-.695-.675c-.214-.146-.682-.35-.77-.595l-.013-.014c.146-.013.32-.066.46-.106.227-.06.435-.047.67-.106.106-.027.213-.06.32-.094v-.06c-.12-.12-.21-.283-.334-.395a8.867 8.867 0 00-1.104-.823c-.21-.134-.476-.22-.697-.334-.08-.04-.214-.06-.26-.127-.12-.146-.19-.34-.275-.514a17.690 17.690 0 01-.547-1.163c-.12-.262-.193-.523-.34-.763-.69-1.137-1.437-1.826-2.586-2.500-.247-.14-.543-.2-.856-.274-.167-.008-.334-.02-.5-.027-.11-.047-.216-.174-.31-.235-.38-.24-1.364-.76-1.644-.072-.18.434.267.862.422 1.082.115.153.26.328.34.5.047.116.06.235.107.356.106.294.207.622.347.897.073.14.153.287.247.413.054.073.146.107.167.227-.094.136-.1.334-.154.5-.24.757-.146 1.693.194 2.250.107.166.362.534.703.393.3-.12.234-.5.32-.835.02-.08.007-.133.048-.187v.015c.094.188.188.367.274.555.206.328.566.668.867.895.16.12.287.328.487.402v-.02h-.015c-.043-.058-.1-.086-.154-.133a3.445 3.445 0 01-.35-.4 8.760 8.760 0 01-.747-1.218c-.11-.21-.202-.436-.29-.643-.04-.08-.04-.2-.107-.24-.1.146-.247.273-.32.453-.127.288-.14.642-.188 1.010-.027.007-.014 0-.027.014-.214-.052-.287-.274-.367-.46-.2-.475-.233-1.238-.06-1.785.047-.14.247-.582.167-.716-.042-.127-.174-.2-.247-.303a2.478 2.478 0 01-.24-.427c-.16-.374-.24-.788-.414-1.162-.08-.173-.22-.354-.334-.513-.127-.18-.267-.307-.368-.52-.033-.073-.08-.194-.027-.274.014-.054.042-.075.094-.09.088-.072.335.022.422.062.247.1.455.194.662.334.094.066.195.193.315.226h.14c.214.047.455.014.655.073.355.114.675.28.962.46a5.953 5.953 0 012.085 2.286c.08.154.115.295.188.455.14.33.313.663.455.982.14.315.275.636.476.897.1.14.502.213.682.286.133.06.34.115.46.188.23.14.454.3.67.454.11.076.443.243.463.378z"/></symbol>
+    <symbol id="b-postgres" viewBox="0 0 24 24"><path fill="#7FB0E6" d="M23.5594 14.7228a.5269.5269 0 0 0-.0563-.1191c-.139-.2632-.4768-.3418-1.0074-.2321-1.6533.3411-2.2935.1312-2.5256-.0191 1.342-2.0482 2.445-4.522 3.0411-6.8297.2714-1.0507.7982-3.5237.1222-4.7316a1.5641 1.5641 0 0 0-.1509-.235C21.6931.9086 19.8007.0248 17.5099.0005c-1.4947-.0158-2.7705.3461-3.1161.4794a9.449 9.449 0 0 0-.5159-.0816 8.044 8.044 0 0 0-1.3114-.1278c-1.1822-.0184-2.2038.2642-3.0498.8406-.8573-.3211-4.7888-1.645-7.2219.0788C.9359 2.1526.3086 3.8733.4302 6.3043c.0409.818.5069 3.334 1.2423 5.7436.4598 1.5065.9387 2.7019 1.4334 3.582.553.9942 1.1259 1.5933 1.7143 1.7895.4474.1491 1.1327.1441 1.8581-.7279.8012-.9635 1.5903-1.8258 1.9446-2.2069.4351.2355.9064.3625 1.39.3772a.0569.0569 0 0 0 .0004.0041 11.0312 11.0312 0 0 0-.2472.3054c-.3389.4302-.4094.5197-1.5002.7443-.3102.064-1.1344.2339-1.1464.8115-.0025.1224.0329.2309.0919.3268.2269.4231.9216.6097 1.015.6331 1.3345.3335 2.5044.092 3.3714-.6787-.017 2.231.0775 4.4174.3454 5.0874.2212.5529.7618 1.9045 2.4692 1.9043.2505 0 .5263-.0291.8296-.0941 1.7819-.3821 2.5557-1.1696 2.855-2.9059.1503-.8707.4016-2.8753.5388-4.1012.0169-.0703.0357-.1207.057-.1362.0007-.0005.0697-.0471.4272.0307a.3673.3673 0 0 0 .0443.0068l.2539.0223.0149.001c.8468.0384 1.9114-.1426 2.5312-.4308.6438-.2988 1.8057-1.0323 1.5951-1.6698zM2.371 11.8765c-.7435-2.4358-1.1779-4.8851-1.2123-5.5719-.1086-2.1714.4171-3.6829 1.5623-4.4927 1.8367-1.2986 4.8398-.5408 6.108-.13-.0032.0032-.0066.0061-.0098.0094-2.0238 2.044-1.9758 5.536-1.9708 5.7495-.0002.0823.0066.1989.0162.3593.0348.5873.0996 1.6804-.0735 2.9184-.1609 1.1504.1937 2.2764.9728 3.0892.0806.0841.1648.1631.2518.2374-.3468.3714-1.1004 1.1926-1.9025 2.1576-.5677.6825-.9597.5517-1.0886.5087-.3919-.1307-.813-.5871-1.2381-1.3223-.4796-.839-.9635-2.0317-1.4155-3.5126zm6.0072 5.0871c-.1711-.0428-.3271-.1132-.4322-.1772.0889-.0394.2374-.0902.4833-.1409 1.2833-.2641 1.4815-.4506 1.9143-1.0002.0992-.126.2116-.2687.3673-.4426a.3549.3549 0 0 0 .0737-.1298c.1708-.1513.2724-.1099.4369-.0417.156.0646.3078.26.3695.4752.0291.1016.0619.2945-.0452.4444-.9043 1.2658-2.2216 1.2494-3.1676 1.0128zm2.094-3.988-.0525.141c-.133.3566-.2567.6881-.3334 1.003-.6674-.0021-1.3168-.2872-1.8105-.8024-.6279-.6551-.9131-1.5664-.7825-2.5004.1828-1.3079.1153-2.4468.079-3.0586-.005-.0857-.0095-.1607-.0122-.2199.2957-.2621 1.6659-.9962 2.6429-.7724.4459.1022.7176.4057.8305.928.5846 2.7038.0774 3.8307-.3302 4.7363-.084.1866-.1633.3629-.2311.5454zm7.3637 4.5725c-.0169.1768-.0358.376-.0618.5959l-.146.4383a.3547.3547 0 0 0-.0182.1077c-.0059.4747-.054.6489-.115.8693-.0634.2292-.1353.4891-.1794 1.0575-.11 1.4143-.8782 2.2267-2.4172 2.5565-1.5155.3251-1.7843-.4968-2.0212-1.2217a6.5824 6.5824 0 0 0-.0769-.2266c-.2154-.5858-.1911-1.4119-.1574-2.5551.0165-.5612-.0249-1.9013-.3302-2.6462.0044-.2932.0106-.5909.019-.8918a.3529.3529 0 0 0-.0153-.1126 1.4927 1.4927 0 0 0-.0439-.208c-.1226-.4283-.4213-.7866-.7797-.9351-.1424-.059-.4038-.1672-.7178-.0869.067-.276.1831-.5875.309-.9249l.0529-.142c.0595-.16.134-.3257.213-.5012.4265-.9476 1.0106-2.2453.3766-5.1772-.2374-1.0981-1.0304-1.6343-2.2324-1.5098-.7207.0746-1.3799.3654-1.7088.5321a5.6716 5.6716 0 0 0-.1958.1041c.0918-1.1064.4386-3.1741 1.7357-4.4823a4.0306 4.0306 0 0 1 .3033-.276.3532.3532 0 0 0 .1447-.0644c.7524-.5706 1.6945-.8506 2.802-.8325.4091.0067.8017.0339 1.1742.081 1.939.3544 3.2439 1.4468 4.0359 2.3827.8143.9623 1.2552 1.9315 1.4312 2.4543-1.3232-.1346-2.2234.1268-2.6797.779-.9926 1.4189.543 4.1729 1.2811 5.4964.1353.2426.2522.4522.2889.5413.2403.5825.5515.9713.7787 1.2552.0696.087.1372.1714.1885.245-.4008.1155-1.1208.3825-1.0552 1.717-.0123.1563-.0423.4469-.0834.8148-.0461.2077-.0702.4603-.0994.7662zm.8905-1.6211c-.0405-.8316.2691-.9185.5967-1.0105a2.8566 2.8566 0 0 0 .135-.0406 1.202 1.202 0 0 0 .1342.103c.5703.3765 1.5823.4213 3.0068.1344-.2016.1769-.5189.3994-.9533.6011-.4098.1903-1.0957.333-1.7473.3636-.7197.0336-1.0859-.0807-1.1721-.151zm.5695-9.2712c-.0059.3508-.0542.6692-.1054 1.0017-.055.3576-.112.7274-.1264 1.1762-.0142.4368.0404.8909.0932 1.3301.1066.887.216 1.8003-.2075 2.7014a3.5272 3.5272 0 0 1-.1876-.3856c-.0527-.1276-.1669-.3326-.3251-.6162-.6156-1.1041-2.0574-3.6896-1.3193-4.7446.3795-.5427 1.3408-.5661 2.1781-.463zm.2284 7.0137a12.3762 12.3762 0 0 0-.0853-.1074l-.0355-.0444c.7262-1.1995.5842-2.3862.4578-3.4385-.0519-.4318-.1009-.8396-.0885-1.2226.0129-.4061.0666-.7543.1185-1.0911.0639-.415.1288-.8443.1109-1.3505.0134-.0531.0188-.1158.0118-.1902-.0457-.4855-.5999-1.938-1.7294-3.253-.6076-.7073-1.4896-1.4972-2.6889-2.0395.5251-.1066 1.2328-.2035 2.0244-.1859 2.0515.0456 3.6746.8135 4.8242 2.2824a.908.908 0 0 1 .0667.1002c.7231 1.3556-.2762 6.2751-2.9867 10.5405zm-8.8166-6.1162c-.025.1794-.3089.4225-.6211.4225a.5821.5821 0 0 1-.0809-.0056c-.1873-.026-.3765-.144-.5059-.3156-.0458-.0605-.1203-.178-.1055-.2844.0055-.0401.0261-.0985.0925-.1488.1182-.0894.3518-.1226.6096-.0867.3163.0441.6426.1938.6113.4186zm7.9305-.4114c.0111.0792-.049.201-.1531.3102-.0683.0717-.212.1961-.4079.2232a.5456.5456 0 0 1-.075.0052c-.2935 0-.5414-.2344-.5607-.3717-.024-.1765.2641-.3106.5611-.352.297-.0414.6111.0088.6356.1851z"/></symbol>
+    <symbol id="b-pandas" viewBox="0 0 24 24"><g fill="#DDE6F5"><rect x="16.922" width="2.623" height="18.104"/><rect x="12.796" y="5.903" width="2.623" height="5.446"/><rect x="12.796" y="17.1" width="2.623" height="5.446"/><rect x="4.456" y="5.896" width="2.622" height="18.104"/><rect x="8.669" y="12.606" width="2.623" height="5.447"/><rect x="8.669" y="1.419" width="2.623" height="5.446"/></g><rect x="12.796" y="12.94" width="2.623" height="2.57" fill="#FFCA00"/><rect x="8.669" y="8.455" width="2.623" height="2.57" fill="#E70488"/></symbol>
+    <symbol id="b-numpy" viewBox="0 0 24 24"><path fill="#4DABCF" d="M10.315 4.876L6.3048 2.8517l-4.401 2.1965 4.1186 2.0683zm1.8381.9277l4.2045 2.1223-4.3622 2.1906-4.125-2.0718zm5.6153-2.9213l4.3193 2.1658-3.863 1.9402-4.2131-2.1252zm-1.859-.9329L12.021 0 8.1742 1.9193l4.0068 2.0208zm-3.0401 16.7443V24l4.7107-2.3507-.0053-5.3085zm4.7037-4.2057l-.0052-5.2528-4.6985 2.3356v5.2546zm5.6553-.9845v5.327l-4.0178 2.0052-.0029-5.3028zm0-1.8626V6.4214l-4.0253 2.001.0034 5.2633zM11.2062 11.571L8.0333 9.9756v6.895s-3.8804-8.2564-4.2399-8.998c-.0463-.0957-.2371-.2007-.2858-.2262C2.8118 7.2812.773 6.2485.773 6.2485V18.43l2.8204 1.5076v-6.3674s3.8392 7.3775 3.878 7.458c.0389.0807.4245.8582.8362 1.1314.5485.363 2.8992 1.7766 2.8992 1.7766z"/></symbol>
+    <symbol id="b-adf" viewBox="0 0 24 24"><path fill="url(#g-az)" d="M2 22V11.5l5.5 3.2v-3.2l5.5 3.2v-3.2l5 2.9V2h4v20H2Z"/><g fill="#BFE3FF"><rect x="5" y="17" width="2.4" height="2.4" rx=".4"/><rect x="9.5" y="17" width="2.4" height="2.4" rx=".4"/><rect x="14" y="17" width="2.4" height="2.4" rx=".4"/></g></symbol>
+    <symbol id="b-databricks" viewBox="0 0 24 24"><path fill="#FF3621" d="M.95 14.184L12 20.403l9.919-5.55v2.21L12 22.662l-10.484-5.96-.565.308v.77L12 24l11.05-6.218v-4.317l-.515-.309L12 19.118l-9.867-5.653v-2.21L12 16.805l11.05-6.218V6.32l-.515-.308L12 11.974 2.647 6.681 12 1.388l7.76 4.368.668-.411v-.566L12 0 .95 6.27v.72L12 13.207l9.919-5.55v2.26L12 15.52 1.516 9.56l-.565.308Z"/></symbol>
+    <symbol id="b-synapse" viewBox="0 0 24 24"><path fill="none" stroke="#3AA8FF" stroke-width="2" stroke-linejoin="round" d="m12 1.8 9 5.1v10.2l-9 5.1-9-5.1V6.9l9-5.1Z"/><path fill="none" stroke="#5FE0FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M15.5 8.2H10a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8.5"/></symbol>
+    <symbol id="b-adls" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16.5" rx="2.2" fill="url(#g-az)"/><path fill="#5FE0FF" d="M2 6.2A2.2 2.2 0 0 1 4.2 4h15.6A2.2 2.2 0 0 1 22 6.2V8.5H2Z"/><g fill="#7DD36C"><rect x="4.5" y="11" width="6" height="2" rx=".5"/><rect x="4.5" y="14.8" width="6" height="2" rx=".5"/></g><g fill="#BFE3FF"><rect x="13" y="11" width="6.5" height="2" rx=".5"/><rect x="13" y="14.8" width="6.5" height="2" rx=".5"/></g></symbol>
+    <symbol id="b-airflow" viewBox="0 0 24 24"><path fill="#017CEE" d="M12 12C12 7 9.5 3 3 2c.5 5.5 4 9 9 10Z"/><path fill="#00C7D4" d="M12 12c5 0 9-2.5 10-9-5.5.5-9 4-10 9Z"/><path fill="#00AD46" d="M12 12c0 5 2.5 9 9 10-.5-5.5-4-9-9-10Z"/><path fill="#E43921" d="M12 12c-5 0-9 2.5-10 9 5.5-.5 9-4 10-9Z"/></symbol>
+    <symbol id="b-docker" viewBox="0 0 24 24"><path fill="#2496ED" d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.376 11.376 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"/></symbol>
+    <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="b-powerbi" viewBox="0 0 24 24"><rect x="13" y="3" width="5" height="18" rx="1.2" fill="#F2C811"/><rect x="8" y="8" width="5" height="13" rx="1.2" fill="#E3A90A"/><rect x="3" y="13" width="5" height="8" rx="1.2" fill="#C78A06"/></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="2.6"/><circle cx="4.5" cy="4.5" r="2.2"/><circle cx="19.5" cy="4.5" r="2.2"/><circle cx="4.5" cy="19.5" r="2.2"/><circle cx="19.5" cy="19.5" r="2.2"/><path d="m6.2 6.2 3.9 3.9M17.8 6.2l-3.9 3.9M6.2 17.8l3.9-3.9M17.8 17.8l-3.9-3.9"/></g></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M21 3 10 14M21 3l-7 18-4-7-7-4 18-7Z"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header" id="top">
+    <nav class="nav board-width" aria-label="Primary">
+      <a class="logo" href="#home" aria-label="Mathusan Manivannan, home">
+        <svg viewBox="0 0 40 32" aria-hidden="true"><path d="M3 29V4l9.5 13L22 4v25" fill="none" stroke="#E6EDF7" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M22 29V4l7.5 10.5L37 4v25" fill="none" stroke="#3D95FF" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="sr-only">Menu</span>
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn-outline btn-sm" href="assets/cv.pdf" download="Mathusan-Manivannan-CV.pdf">
+          <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Download CV
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="board">
+    <!-- ============ HERO ============ -->
+    <section class="panel screen p-hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="badge"><span class="badge-dot" aria-hidden="true"></span>Data Science Undergraduate <span class="sep" aria-hidden="true">·</span> Aspiring Data Engineer</p>
+          <h1 id="hero-title"><span class="hero-hi">Hi, I'm</span> <span class="hero-name">Mathusan <span class="accent">Manivannan</span></span></h1>
+          <p class="hero-tagline">Building Data Solutions for <span class="accent">Real World Impact</span></p>
+          <p class="hero-intro">I'm a second-year Data Science undergraduate at SLIIT (2024–2028), passionate about data engineering, data analysis and machine learning. I enjoy working with real world data, building pipelines, analyzing complex datasets and creating meaningful solutions.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View My Projects<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-outline" href="#contact">Get In Touch</a>
+          </div>
+          <ul class="social" aria-label="Social links">
+            <li><a href="https://github.com/Mathusan1216" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/mathusan-manivannan-b94190403/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+            <li><a href="mailto:manivannanmathusan7@gmail.com" aria-label="Email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+          </ul>
+        </div>
+
+        <!-- Hero illustration (decorative): pipeline cards linked over a laptop, plant and book stack -->
+        <div class="hero-art" aria-hidden="true">
+          <svg class="scene" viewBox="0 0 900 600">
+            <defs>
+              <linearGradient id="g-bezel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3A4A6B"/><stop offset="1" stop-color="#151E33"/></linearGradient>
+              <linearGradient id="g-deck" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5B6B8C"/><stop offset=".5" stop-color="#2B3754"/><stop offset="1" stop-color="#121A2E"/></linearGradient>
+              <linearGradient id="g-book" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1B2A4C"/><stop offset="1" stop-color="#0D1730"/></linearGradient>
+              <linearGradient id="g-pot" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#26324F"/><stop offset=".6" stop-color="#131C33"/><stop offset="1" stop-color="#0B1222"/></linearGradient>
+              <radialGradient id="g-glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#2E8BFF" stop-opacity=".55"/><stop offset="1" stop-color="#2E8BFF" stop-opacity="0"/></radialGradient>
+              <radialGradient id="g-screen-glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#2E8BFF" stop-opacity=".35"/><stop offset="1" stop-color="#2E8BFF" stop-opacity="0"/></radialGradient>
+              <pattern id="p-keys" width="16" height="11" patternUnits="userSpaceOnUse" patternTransform="matrix(1 -.095 -.62 1 0 0)">
+                <rect x="1" y="1" width="13.5" height="8.5" rx="1.6" fill="#141C2F"/>
+              </pattern>
+              <filter id="f-blur"><feGaussianBlur stdDeviation="6"/></filter>
+            </defs>
+
+            <!-- desk glow -->
+            <ellipse cx="520" cy="540" rx="380" ry="60" fill="url(#g-glow)"/>
+            <ellipse cx="520" cy="320" rx="260" ry="170" fill="url(#g-screen-glow)"/>
+
+            <!-- connection line between the pipeline cards -->
+            <g class="flow" fill="none" stroke-linecap="round">
+              <path class="flow-base" d="M150 170 C 190 110, 290 80, 390 78 S 560 86, 640 112 S 790 170, 800 250 L 795 340 M140 230 L 140 300"/>
+              <path class="flow-pulse" d="M150 170 C 190 110, 290 80, 390 78 S 560 86, 640 112 S 790 170, 800 250 L 795 340 M140 230 L 140 300"/>
+            </g>
+            <g class="flow-dots" fill="#5AB0FF">
+              <circle cx="236" cy="108" r="5"/><circle cx="520" cy="80" r="4"/><circle cx="740" cy="160" r="4.5"/><circle cx="797" cy="300" r="5"/><circle cx="140" cy="300" r="4.5"/>
+            </g>
+
+            <!-- book stack -->
+            <g class="books" font-family="Inter, sans-serif" font-size="17" font-weight="500" fill="#C9D6EA">
+              <g transform="translate(700 520) rotate(5)"><rect width="215" height="34" rx="3" fill="url(#g-book)" stroke="#2A4A80"/><text x="14" y="23">Real World Projects</text></g>
+              <g transform="translate(712 482) rotate(6)"><rect width="200" height="34" rx="3" fill="url(#g-book)" stroke="#2A4A80"/><text x="14" y="23">Data Engineering</text></g>
+              <g transform="translate(716 444) rotate(6)"><rect width="196" height="34" rx="3" fill="url(#g-book)" stroke="#2A4A80"/><text x="14" y="23">Machine Learning</text></g>
+              <g transform="translate(726 406) rotate(7)"><rect width="186" height="34" rx="3" fill="url(#g-book)" stroke="#3D95FF"/><text x="14" y="23">Data Science</text></g>
+            </g>
+
+            <!-- plant -->
+            <g class="plant" transform="translate(-30 0)">
+              <g fill="#2F7D4A" stroke="#3F9A5E" stroke-width="1">
+                <path d="M235 450c-20-40-55-62-92-70 30 18 55 40 92 70Z"/>
+                <path d="M238 448c-6-50-30-90-62-110 18 34 34 68 62 110Z"/>
+                <path d="M240 448c8-52 4-96-14-128 2 40 4 80 14 128Z"/>
+                <path d="M242 448c18-46 40-80 72-100-26 30-48 60-72 100Z"/>
+                <path d="M244 450c30-30 66-46 100-48-36 12-68 26-100 48Z"/>
+                <path d="M236 452c-34-18-74-22-106-10 38-2 72 2 106 10Z"/>
+              </g>
+              <path d="M188 450h104c-2 40-10 80-24 100h-56c-14-20-22-60-24-100Z" fill="url(#g-pot)" stroke="#2A3A5C"/>
+              <ellipse cx="240" cy="450" rx="52" ry="9" fill="#0A1222" stroke="#2A3A5C"/>
+            </g>
+
+            <!-- laptop: tilted screen showing the energy dashboard -->
+            <g class="laptop" transform="translate(-78 4)">
+              <polygon points="250,566 342,478 724,441 812,516" fill="url(#g-deck)" stroke="#6C7FA6" stroke-width="1.2"/>
+              <polygon points="300,540 366,482 704,450 768,506" fill="url(#p-keys)"/>
+              <polygon points="470,560 498,532 600,523 616,550" fill="#3A4766" opacity=".8"/>
+              <polygon points="250,566 812,516 812,524 252,574" fill="#0E1528"/>
+              <polygon points="318,226 704,188 728,440 342,478" fill="url(#g-bezel)" stroke="#7186B0" stroke-width="1.2"/>
+              <image href="assets/img/energy-480.webp" width="1" height="1" preserveAspectRatio="none" transform="matrix(366 -36 22 226 328 238)"/>
+              <polygon points="328,238 694,202 716,428 350,464" fill="none" stroke="#2E8BFF" stroke-opacity=".5"/>
+              <polygon points="318,226 704,188 728,440 342,478" fill="none" stroke="#5AB0FF" stroke-opacity=".35" filter="url(#f-blur)"/>
+            </g>
+          </svg>
+
+          <div class="step-card sc-collect"><svg class="sc-icon"><use href="#i-db"/></svg><span>Collect<br>Raw Data</span></div>
+          <div class="step-card sc-transform"><svg class="sc-icon"><use href="#i-gear"/></svg><span>Transform<br>ETL</span></div>
+          <div class="step-card sc-analyze"><svg class="sc-icon"><use href="#i-chart-fill"/></svg><span>Analyze<br>Insights</span></div>
+          <div class="step-card sc-impact"><svg class="sc-icon sc-bulb"><use href="#i-bulb"/></svg><span>Real World<br>Impact</span></div>
+        </div>
+      </div>
+
+      <ul class="stats" aria-label="Highlights">
+        <li><a class="stat" href="#projects"><span class="stat-icon"><svg class="icon" aria-hidden="true"><use href="#i-folder"/></svg></span><span class="stat-text"><strong>4</strong>Data &amp; Pipeline Projects</span><svg class="icon stat-go" aria-hidden="true"><use href="#i-chevron"/></svg></a></li>
+        <li><a class="stat" href="#about"><span class="stat-icon"><svg class="icon" aria-hidden="true"><use href="#i-cap"/></svg></span><span class="stat-text"><strong>3.172</strong>GPA</span><svg class="icon stat-go" aria-hidden="true"><use href="#i-chevron"/></svg></a></li>
+        <li><a class="stat" href="#experience"><span class="stat-icon"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg></span><span class="stat-text"><strong>1</strong>Client System in Production</span><svg class="icon stat-go" aria-hidden="true"><use href="#i-chevron"/></svg></a></li>
+        <li><a class="stat" href="#experience"><span class="stat-icon"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg></span><span class="stat-text"><strong>2024 – 2028</strong>SLIIT | Data Science</span><svg class="icon stat-go" aria-hidden="true"><use href="#i-chevron"/></svg></a></li>
+      </ul>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="panel screen p-about" id="about" aria-labelledby="about-title">
+      <div class="about-grid">
+        <div class="about-copy">
+          <p class="eyebrow-line">Get to know me</p>
+          <div class="about-heading">
+            <h2 id="about-title"><span class="at-about">About</span> <span class="at-me">Me</span></h2>
+            <p class="about-tagline">Turning Data into<br>Real World Solutions</p>
+          </div>
+          <div class="about-text">
+            <p>I'm a BSc (Hons) Information Technology undergraduate at SLIIT, specialising in Data Science since 2024 and graduating in 2028.</p>
+            <p>I build end-to-end data pipelines: ingesting and validating raw data, modelling it into star schemas and medallion layers, orchestrating it with Airflow and Azure Data Factory, and serving it to Power BI.</p>
+            <p>I'm seeking a Data Engineering Internship to build reliable, scalable data pipelines.</p>
+          </div>
+        </div>
+
+        <!-- Decorative: portrait in glowing rings, linked pipeline cards -->
+        <div class="about-art">
+          <svg class="about-scene" viewBox="0 0 960 620" aria-hidden="true">
+            <defs>
+              <pattern id="p-dots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="4.5" cy="4.5" r="1.6" fill="#3D95FF"/></pattern>
+              <radialGradient id="g-globe-mask" cx=".5" cy=".5" r=".5"><stop offset=".55" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+              <mask id="m-globe"><circle cx="730" cy="170" r="230" fill="url(#g-globe-mask)"/></mask>
+              <radialGradient id="g-halo" cx=".5" cy=".5" r=".5"><stop offset=".6" stop-color="#2E8BFF" stop-opacity=".35"/><stop offset="1" stop-color="#2E8BFF" stop-opacity="0"/></radialGradient>
+              <linearGradient id="g-bar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3D95FF" stop-opacity=".45"/><stop offset="1" stop-color="#3D95FF" stop-opacity="0"/></linearGradient>
+            </defs>
+            <!-- dotted globe + meridians -->
+            <g class="globe">
+              <rect x="500" y="-60" width="460" height="460" fill="url(#p-dots)" mask="url(#m-globe)" opacity=".55"/>
+              <g fill="none" stroke="#3D95FF" stroke-opacity=".25">
+                <circle cx="730" cy="170" r="230"/><ellipse cx="730" cy="170" rx="120" ry="230"/><ellipse cx="730" cy="170" rx="230" ry="80"/><path d="M500 170h460M730 -60v460"/>
+              </g>
+            </g>
+            <!-- faint data bars -->
+            <g fill="url(#g-bar)">
+              <rect x="40" y="380" width="26" height="180"/><rect x="74" y="430" width="26" height="130"/><rect x="200" y="470" width="20" height="90"/>
+              <rect x="840" y="360" width="24" height="200"/><rect x="872" y="410" width="24" height="150"/><rect x="904" y="300" width="24" height="260"/>
+            </g>
+            <!-- halo + rings around the portrait -->
+            <circle cx="510" cy="280" r="250" fill="url(#g-halo)"/>
+            <g class="rings" fill="none" stroke-linecap="round">
+              <circle class="ring ring-a" cx="510" cy="280" r="214" stroke="#3D95FF" stroke-width="10" stroke-dasharray="300 60 120 60 260 545"/>
+              <circle class="ring ring-b" cx="510" cy="280" r="236" stroke="#5AB0FF" stroke-opacity=".6" stroke-width="3" stroke-dasharray="180 90 60 400 420 333"/>
+              <circle cx="510" cy="280" r="196" stroke="#8EC3FF" stroke-opacity=".5" stroke-width="2"/>
+            </g>
+            <!-- pipeline connector -->
+            <g class="flow" fill="none" stroke-linecap="round">
+              <path class="flow-base" d="M160 200 C 215 196, 238 246, 222 272 M245 366 C 282 366, 292 396, 298 424 M436 498 C 480 498, 496 515, 525 515 C 568 515, 600 546, 640 534 C 660 528, 668 505, 680 505"/>
+              <path class="flow-pulse" d="M160 200 C 215 196, 238 246, 222 272 M245 366 C 282 366, 292 396, 298 424 M436 498 C 480 498, 496 515, 525 515 C 568 515, 600 546, 640 534 C 660 528, 668 505, 680 505"/>
+            </g>
+            <g class="flow-dots" fill="#5AB0FF">
+              <circle cx="160" cy="200" r="6"/><circle cx="222" cy="272" r="5"/><circle cx="245" cy="366" r="6"/><circle cx="296" cy="412" r="5"/><circle cx="436" cy="498" r="6"/><circle cx="525" cy="515" r="5"/><circle cx="680" cy="505" r="6"/>
+            </g>
+          </svg>
+
+          <div class="about-portrait">
+            <picture>
+              <source type="image/webp" srcset="assets/img/photo-320.webp 320w, assets/img/photo-640.webp 640w" sizes="(min-width: 1100px) 300px, 40vw">
+              <img src="assets/photo.png" alt="Portrait of Mathusan Manivannan in a dark suit" width="480" height="480" decoding="async">
+            </picture>
+          </div>
+
+          <div class="pipe-card pc-raw" aria-hidden="true"><svg class="pc-icon"><use href="#i-db"/></svg><strong>Raw Data</strong><span>Ingest &amp; Validate</span></div>
+          <div class="pipe-card pc-transform" aria-hidden="true"><svg class="pc-icon"><use href="#i-grid"/></svg><strong>Transform</strong><span>Star Schema<br>Medallion Layer</span></div>
+          <div class="pipe-card pc-orch" aria-hidden="true"><svg class="pc-icon"><use href="#i-play"/></svg><strong>Orchestrate</strong><span>Airflow<br>Azure Data Factory</span></div>
+          <div class="pipe-card pc-viz" aria-hidden="true"><svg class="pc-icon"><use href="#i-chart-fill"/></svg><strong>Visualize</strong><span>Power BI</span></div>
+          <div class="mini-tile mt-chart" aria-hidden="true"><svg><use href="#i-chart-fill"/></svg></div>
+          <div class="mini-tile mt-cloud" aria-hidden="true"><svg><use href="#i-cloud-fill"/></svg></div>
+        </div>
+      </div>
+
+      <ul class="facts">
+        <li class="fact"><svg class="fact-icon" aria-hidden="true"><use href="#i-cap"/></svg><span><span class="fact-label">Degree</span>BSc (Hons) Information Technology — Data Science</span></li>
+        <li class="fact"><svg class="fact-icon" aria-hidden="true"><use href="#i-uni"/></svg><span><span class="fact-label">University</span>Sri Lanka Institute of Information Technology (SLIIT)</span></li>
+        <li class="fact"><svg class="fact-icon" aria-hidden="true"><use href="#i-target"/></svg><span><span class="fact-label">Seeking</span>Data Engineering Internship</span></li>
+        <li class="fact"><svg class="fact-icon" aria-hidden="true"><use href="#i-rocket"/></svg><span><span class="fact-label">Co-founder</span>Student software startup</span></li>
+      </ul>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="panel screen p-skills" id="skills" aria-labelledby="skills-title">
+      <div class="panel-head skills-head">
+        <div>
+          <p class="eyebrow-line both">My Skills</p>
+          <h2 class="skills-title" id="skills-title">My <span class="accent">Skills</span></h2>
+          <p class="skills-lead">A combination of programming, data engineering, and analytics skills that I use to build end-to-end data solutions.</p>
+        </div>
+        <a class="btn btn-outline btn-sm" href="assets/cv.pdf" target="_blank" rel="noopener">View Resume<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="sk-head"><span class="sk-tile"><svg aria-hidden="true"><use href="#i-code"/></svg></span><div><h3>Programming</h3><p>Languages I use</p></div></div>
+          <ul class="sk-items">
+            <li><svg aria-hidden="true"><use href="#b-python"/></svg>Python</li>
+            <li><svg aria-hidden="true"><use href="#b-sql"/></svg>SQL</li>
+            <li><svg aria-hidden="true"><use href="#b-spark"/></svg>PySpark</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <div class="sk-head"><span class="sk-tile"><svg aria-hidden="true"><use href="#i-db"/></svg></span><div><h3>Databases</h3><p>Data storage &amp; management</p></div></div>
+          <ul class="sk-items">
+            <li><svg aria-hidden="true"><use href="#b-mysql"/></svg>MySQL</li>
+            <li><svg aria-hidden="true"><use href="#b-postgres"/></svg>PostgreSQL</li>
+          </ul>
+        </div>
+        <div class="skill-card featured">
+          <div class="sk-head"><span class="sk-tile"><svg aria-hidden="true"><use href="#i-chart-fill"/></svg></span><div><h3>Data &amp; Analytics</h3><p>Data analysis &amp; manipulation</p></div></div>
+          <ul class="sk-items">
+            <li><svg aria-hidden="true"><use href="#b-pandas"/></svg>Pandas</li>
+            <li><svg aria-hidden="true"><use href="#b-numpy"/></svg>NumPy</li>
+          </ul>
+        </div>
+        <div class="skill-card featured sk-wide">
+          <div class="sk-head"><span class="sk-tile"><svg aria-hidden="true"><use href="#i-gear"/></svg></span><div><h3>Data Engineering</h3><p>Building reliable data pipelines</p></div></div>
+          <ul class="sk-items cols-2 line">
+            <li><svg aria-hidden="true"><use href="#i-db-gear"/></svg>ETL/ELT</li>
+            <li><svg aria-hidden="true"><use href="#i-broom"/></svg>Data Cleaning</li>
+            <li><svg aria-hidden="true"><use href="#i-check-circle"/></svg>Data Validation</li>
+            <li><svg aria-hidden="true"><use href="#i-route"/></svg>Data Pipelines</li>
+            <li><svg aria-hidden="true"><use href="#i-warehouse"/></svg>Data Warehousing</li>
+            <li><svg aria-hidden="true"><use href="#i-clock"/></svg>Batch Processing</li>
+            <li><svg aria-hidden="true"><use href="#i-cube"/></svg>Dimensional Modeling</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <div class="sk-head"><span class="sk-tile"><svg aria-hidden="true"><use href="#i-cloud-fill"/></svg></span><div><h3>Cloud</h3><p>Microsoft Azure Services</p></div></div>
+          <ul class="sk-items compact">
+            <li><svg aria-hidden="true"><use href="#b-adf"/></svg>Azure Data Factory</li>
+            <li><svg aria-hidden="true"><use href="#b-databricks"/></svg>Azure Databricks</li>
+            <li><svg aria-hidden="true"><use href="#b-synapse"/></svg>Azure Synapse Analytics</li>
+            <li><svg aria-hidden="true"><use href="#b-adls"/></svg>ADLS Gen 2</li>
+            <li><svg aria-hidden="true"><use href="#b-airflow"/></svg>Apache Airflow</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tools">
+        <div class="sk-head"><span class="sk-tile"><svg aria-hidden="true"><use href="#i-wrench"/></svg></span><div><h3>Tools I Use</h3><p>Development, deployment and visualization tools</p></div></div>
+        <ul class="tool-list">
+          <li><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#F05033" d="M23.5 11 13 .5a1.7 1.7 0 0 0-2.4 0L8.4 2.7l2.8 2.8a2 2 0 0 1 2.6 2.6l2.7 2.7a2 2 0 1 1-1.2 1.2l-2.5-2.5v6.6a2 2 0 1 1-1.7-.1V9.3a2 2 0 0 1-1.1-2.7L7.2 3.9.5 10.6a1.7 1.7 0 0 0 0 2.4L11 23.5a1.7 1.7 0 0 0 2.4 0l10.1-10.1a1.7 1.7 0 0 0 0-2.4Z"/></svg>Git</li>
+          <li><svg class="tool-icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub</li>
+          <li><svg class="tool-icon" aria-hidden="true"><use href="#b-docker"/></svg>Docker</li>
+          <li><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="13" y="3" width="5" height="18" rx="1.2" fill="#F2C811"/><rect x="8" y="8" width="5" height="13" rx="1.2" fill="#E3A90A"/><rect x="3" y="13" width="5" height="8" rx="1.2" fill="#C78A06"/></svg>Power BI</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="panel screen p-projects" id="projects" aria-labelledby="projects-title">
+      <div class="panel-head skills-head">
+        <div>
+          <p class="eyebrow-line both">Featured</p>
+          <h2 class="skills-title" id="projects-title">Featured <span class="accent">Projects</span></h2>
+          <p class="skills-lead">A collection of my recent work in data engineering, data science and software development.</p>
+        </div>
+        <a class="btn btn-outline btn-sm" href="https://github.com/Mathusan1216" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>View all on GitHub<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="projects-grid">
+        <article class="project">
+          <div class="project-media media-diagram">
+            <svg viewBox="0 0 480 270" role="img" aria-labelledby="azure-svg-title">
+              <title id="azure-svg-title">Diagram: AdventureWorks dataset flows into Bronze, Silver and Gold medallion layers, built with Azure Data Factory, Databricks, ADLS Gen2, Synapse and Power BI</title>
+              <defs>
+                <linearGradient id="c-blue" x1="0" x2="1"><stop offset="0" stop-color="#1F6FE0"/><stop offset=".5" stop-color="#5AB0FF"/><stop offset="1" stop-color="#1450B0"/></linearGradient>
+                <linearGradient id="c-bronze" x1="0" x2="1"><stop offset="0" stop-color="#7A4A22"/><stop offset=".5" stop-color="#D99A5B"/><stop offset="1" stop-color="#6A3E1A"/></linearGradient>
+                <linearGradient id="c-silver" x1="0" x2="1"><stop offset="0" stop-color="#7F8A9C"/><stop offset=".5" stop-color="#E4E9F1"/><stop offset="1" stop-color="#6E7889"/></linearGradient>
+                <linearGradient id="c-gold" x1="0" x2="1"><stop offset="0" stop-color="#B07D12"/><stop offset=".5" stop-color="#FFD966"/><stop offset="1" stop-color="#9A6B0C"/></linearGradient>
+              </defs>
+              <rect width="480" height="270" fill="#081226"/>
+              <g font-family="Inter, sans-serif" font-size="11" fill="#C9D6EA" text-anchor="middle">
+                <text x="296" y="28" font-size="13" font-weight="600" fill="#5AB0FF">Medallion Architecture</text>
+                <rect x="134" y="40" width="326" height="134" rx="10" fill="#0C1A36" stroke="#3D95FF" stroke-opacity=".8"/>
+                <path d="M38 70v50a22 7 0 0 0 44 0v-50" fill="url(#c-blue)"/><path d="M38 87a22 7 0 0 0 44 0M38 103a22 7 0 0 0 44 0" fill="none" stroke="#000" stroke-opacity=".3"/><ellipse cx="60" cy="70" rx="22" ry="7" fill="#8EC3FF"/>
+                <text x="60" y="150">AdventureWorks</text><text x="60" y="164">Dataset</text>
+                <path d="M172 62v50a22 7 0 0 0 44 0v-50" fill="url(#c-bronze)"/><path d="M172 79a22 7 0 0 0 44 0M172 95a22 7 0 0 0 44 0" fill="none" stroke="#000" stroke-opacity=".3"/><ellipse cx="194" cy="62" rx="22" ry="7" fill="#F0B27A"/><path d="M274 62v50a22 7 0 0 0 44 0v-50" fill="url(#c-silver)"/><path d="M274 79a22 7 0 0 0 44 0M274 95a22 7 0 0 0 44 0" fill="none" stroke="#000" stroke-opacity=".3"/><ellipse cx="296" cy="62" rx="22" ry="7" fill="#F4F7FB"/><path d="M376 62v50a22 7 0 0 0 44 0v-50" fill="url(#c-gold)"/><path d="M376 79a22 7 0 0 0 44 0M376 95a22 7 0 0 0 44 0" fill="none" stroke="#000" stroke-opacity=".3"/><ellipse cx="398" cy="62" rx="22" ry="7" fill="#FFE38A"/>
+                <text x="194" y="142" fill="#E3A46A">Bronze</text><text x="194" y="156" fill="#E3A46A">Raw</text>
+                <text x="296" y="142" fill="#DCE4F0">Silver</text><text x="296" y="156" fill="#DCE4F0">Cleaned</text>
+                <text x="398" y="142" fill="#F5D774">Gold</text><text x="398" y="156" fill="#F5D774">Curated</text>
+                <use href="#b-adf" x="46" y="194" width="28" height="28"/><use href="#b-databricks" x="136" y="194" width="28" height="28"/><use href="#b-adls" x="226" y="194" width="28" height="28"/><use href="#b-synapse" x="316" y="194" width="28" height="28"/><use href="#b-powerbi" x="406" y="194" width="28" height="28"/>
+                <text x="60" y="240">Azure</text><text x="60" y="253">Data Factory</text><text x="150" y="240">Databricks</text><text x="150" y="253">(PySpark)</text><text x="240" y="240">ADLS Gen2</text><text x="330" y="240">Synapse</text><text x="420" y="240">Power BI</text>
+              </g>
+              <g stroke="#5AB0FF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M92 96h30m-6-5 6 5-6 5M224 90h40m-6-5 6 5-6 5M326 90h40m-6-5 6 5-6 5"/>
+                <path d="M84 208h40m-5-4 5 4-5 4M174 208h40m-5-4 5 4-5 4M264 208h40m-5-4 5 4-5 4M354 208h40m-5-4 5 4-5 4" stroke-opacity=".7"/>
+              </g>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-cat">Azure Data Engineering</span>
+              <a class="project-go" href="assets/cv.pdf" target="_blank" rel="noopener" aria-label="Open Azure End-to-End Data Engineering Pipeline (Medallion Architecture)"><svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+            </div>
+            <h3>Azure End-to-End Data Engineering Pipeline (Medallion Architecture)</h3>
+            <p class="project-date">Sep 2026</p>
+            <p>End-to-end Azure data platform on the AdventureWorks dataset (10 source files, 3 years of sales data) using a Bronze/Silver/Gold medallion architecture on ADLS Gen2. A metadata-driven ADF pipeline ingests all 10 files through 1 reusable dataset; Databricks PySpark writes 8 Silver tables as Parquet; Synapse serverless SQL serves the Gold layer to Power BI.</p>
+            <ul class="tags"><li>Azure Data Factory</li><li>Databricks (PySpark)</li><li>ADLS Gen2</li><li>Synapse</li><li>Power BI</li></ul>
+            <div class="project-links">
+              <!-- TODO(repo): replace with the GitHub repo link when published -->
+              <a href="assets/cv.pdf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Details in CV<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <span class="link-pending"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Repository coming soon</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-media media-diagram">
+            <svg viewBox="0 0 480 270" role="img" aria-labelledby="etl-svg-title">
+              <title id="etl-svg-title">Diagram: sales data from CSV, Excel or an API goes through extract, transform and load steps into a PostgreSQL data warehouse, built with Python and Pandas and automated with Apache Airflow</title>
+              <rect width="480" height="270" fill="#081226"/>
+              <g fill="none" stroke="#5AB0FF" stroke-width="1.6" stroke-dasharray="5 4" stroke-linecap="round">
+                <path d="M155 84V40h46M394 40v38"/><path d="M394 160v24"/>
+              </g>
+              <path d="m389 74 5 7 5-7M389 180l5 7 5-7" fill="none" stroke="#5AB0FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <use href="#b-airflow" x="206" y="28" width="24" height="24"/>
+              <g font-family="Inter, sans-serif" font-size="11" fill="#C9D6EA" text-anchor="middle">
+                <text x="236" y="45" text-anchor="start" fill="#5AB0FF" font-weight="600">Automated with Apache Airflow</text>
+                <g fill="#0F1E3D" stroke="#3D95FF" stroke-opacity=".8"><rect x="22" y="94" width="40" height="50" rx="4"/><rect x="30" y="102" width="40" height="50" rx="4"/></g>
+                <path d="M38 116h24M38 124h24M38 132h16" stroke="#8EC3FF" stroke-width="2" stroke-linecap="round"/>
+                <text x="50" y="178" font-weight="600" fill="#E6EDF7">Sales Data</text><text x="50" y="192" font-size="10">(CSV/Excel/API)</text>
+                <rect x="110" y="84" width="90" height="76" rx="10" fill="#0F1E3D" stroke="#3D95FF"/><rect x="228" y="84" width="90" height="76" rx="10" fill="#0F1E3D" stroke="#3D95FF"/><rect x="346" y="84" width="96" height="76" rx="10" fill="#0F1E3D" stroke="#3D95FF"/>
+                <use href="#i-file" x="141" y="96" width="28" height="28" color="#5AB0FF"/><use href="#i-gear" x="259" y="96" width="28" height="28" color="#5AB0FF"/><use href="#b-sql" x="380" y="96" width="28" height="28"/>
+                <text x="155" y="146" font-weight="600" fill="#E6EDF7">Extract</text><text x="273" y="146" font-weight="600" fill="#E6EDF7">Transform</text><text x="394" y="146" font-weight="600" fill="#E6EDF7">Load</text>
+                <rect x="110" y="190" width="140" height="56" rx="10" fill="#0C1A36" stroke="#2A4A80"/><use href="#b-python" x="124" y="204" width="28" height="28"/>
+                <text x="164" y="214" text-anchor="start" font-weight="600" fill="#E6EDF7">Python</text><text x="164" y="229" text-anchor="start">Pandas</text>
+                <rect x="282" y="190" width="180" height="56" rx="10" fill="#0C1A36" stroke="#2A4A80"/><use href="#b-postgres" x="296" y="204" width="28" height="28"/>
+                <text x="334" y="214" text-anchor="start" font-weight="600" fill="#E6EDF7">PostgreSQL</text><text x="334" y="229" text-anchor="start">(Data Warehouse)</text>
+              </g>
+              <g stroke="#5AB0FF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M80 122h24m-6-5 6 5-6 5M200 122h22m-6-5 6 5-6 5M318 122h22m-6-5 6 5-6 5"/>
+              </g>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-cat">Data Engineering</span>
+              <a class="project-go" href="assets/cv.pdf" target="_blank" rel="noopener" aria-label="Open E-Commerce Sales ETL Pipeline"><svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+            </div>
+            <h3>E-Commerce Sales ETL Pipeline</h3>
+            <p class="project-date">Aug 2026</p>
+            <p>End-to-end ETL pipeline that cleans, validates, and deduplicates e-commerce sales data with Python and Pandas, loads it into a PostgreSQL star-schema warehouse, and automates runs with Apache Airflow (scheduling, retries). Containerised with Docker.</p>
+            <ul class="tags"><li>Python</li><li>Pandas</li><li>PostgreSQL</li><li>Apache Airflow</li><li>Docker</li></ul>
+            <div class="project-links">
+              <!-- TODO(repo): replace with the GitHub repo link when published -->
+              <a href="assets/cv.pdf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Details in CV<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <span class="link-pending"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Repository coming soon</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-media">
+            <img src="assets/img/energy-480.webp" srcset="assets/img/energy-480.webp 480w, assets/img/energy-960.webp 960w" sizes="(min-width: 1240px) 440px, (min-width: 700px) 50vw, 100vw" alt="Energy dashboard built from the project&#39;s data mart: 2023 KPIs, a world map of primary energy consumption, and electricity demand and mix trends" width="960" height="540" loading="lazy" decoding="async">
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-cat">Data Analytics &amp; BI</span>
+              <a class="project-go" href="https://github.com/Mathusan1216/Global-Energy-DWBI" target="_blank" rel="noopener noreferrer" aria-label="Open Global Energy Consumption and Electricity Demand Analytics"><svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+            </div>
+            <h3>Global Energy Consumption &amp; Electricity Demand Analytics</h3>
+            <p class="project-date">Oct 2026</p>
+            <p>ETL pipeline in Python/Pandas across 3 data sources, processing 23K+ energy records covering 200+ countries and 100+ years, into a SQL Server data warehouse. Interactive Power BI dashboard with Year/Decade drill-down and global energy trends analysis.</p>
+            <ul class="tags"><li>Python</li><li>Pandas</li><li>SQL Server</li><li>Data Warehouse</li><li>Power BI</li></ul>
+            <div class="project-links">
+              <a href="https://github.com/Mathusan1216/Global-Energy-DWBI" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>View Code<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-media">
+            <img src="assets/img/pos-480.webp" srcset="assets/img/pos-480.webp 480w, assets/img/pos-960.webp 960w" sizes="(min-width: 1240px) 440px, (min-width: 700px) 50vw, 100vw" alt="Cafe Lush website home page, the client&#39;s live ordering site" width="960" height="563" loading="lazy" decoding="async">
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-cat">Full Stack Development</span>
+              <a class="project-go" href="https://shanthacafelush.com" target="_blank" rel="noopener noreferrer" aria-label="Open Full-Stack POS and Student Order System"><svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+            </div>
+            <h3>Full-Stack POS &amp; Student Order System</h3>
+            <p class="project-date">May 2026</p>
+            <p>PostgreSQL-backed POS and student order management system for a real client, with data models for products, orders, users, payments, and transactions, and backend APIs for creating, retrieving, updating, and reporting data.</p>
+            <ul class="tags"><li>React</li><li>Python</li><li>PostgreSQL</li></ul>
+            <div class="project-links">
+              <a href="https://github.com/IT24100268/Cafe-Lush" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>View Code<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <a href="https://shanthacafelush.com" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>Live Site<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ WORKFLOW ============ -->
+    <section class="panel screen p-flow" id="workflow" aria-labelledby="workflow-title">
+      <!-- Decorative: rising trend line and chart tile, top right -->
+      <svg class="flow-deco" viewBox="0 0 560 200" aria-hidden="true">
+        <g stroke="#3D95FF" stroke-opacity=".12"><path d="M60 0v200M160 0v200M260 0v200M360 0v200M460 0v200M0 50h560M0 120h560"/></g>
+        <path d="M40 190C150 180 190 100 300 70S420 70 470 50 520 20 560 18" fill="none" stroke="#3D95FF" stroke-width="2.5" stroke-opacity=".75"/>
+        <path d="M60 196C170 190 230 150 320 150S430 170 560 130" fill="none" stroke="#3D95FF" stroke-width="1.5" stroke-opacity=".3"/>
+        <g fill="#5AB0FF"><circle cx="300" cy="70" r="5"/><circle cx="556" cy="18" r="4.5"/></g>
+        <g fill="#3D95FF" fill-opacity=".45"><circle cx="160" cy="174" r="3"/><circle cx="320" cy="150" r="3"/><circle cx="420" cy="156" r="3"/></g>
+        <rect x="420" y="70" width="110" height="80" rx="10" fill="#0E1F40" stroke="#3D95FF" stroke-opacity=".35"/>
+        <g fill="#3D95FF"><rect x="446" y="122" width="11" height="12" rx="2"/><rect x="463" y="112" width="11" height="22" rx="2"/><rect x="480" y="100" width="11" height="34" rx="2"/><rect x="497" y="88" width="11" height="46" rx="2"/></g>
+      </svg>
+      <div class="flow-head">
+        <p class="eyebrow-line">My Workflow</p>
+        <h2 class="skills-title" id="workflow-title">From Raw Data to <span class="accent">Real&#8209;World Insight</span></h2>
+        <p class="skills-lead">A simplified view of how I turn data into meaningful insights.</p>
+      </div>
+      <ol class="flow-steps">
+        <li class="flow-step">
+          <span class="flow-node"><span class="flow-num" aria-hidden="true">1</span><svg aria-hidden="true"><use href="#i-db"/></svg></span>
+          <div class="flow-card"><h3><span class="sr-only">Step 1: </span>Ingest</h3><p>Pull from files, APIs, and databases.</p></div>
+        </li>
+        <li class="flow-step">
+          <span class="flow-node"><span class="flow-num" aria-hidden="true">2</span><svg aria-hidden="true"><use href="#i-clean"/></svg></span>
+          <div class="flow-card"><h3><span class="sr-only">Step 2: </span>Clean &amp; Validate</h3><p>Deduplicate, validate, apply business rules.</p></div>
+        </li>
+        <li class="flow-step">
+          <span class="flow-node"><span class="flow-num" aria-hidden="true">3</span><svg aria-hidden="true"><use href="#i-network"/></svg></span>
+          <div class="flow-card"><h3><span class="sr-only">Step 3: </span>Model</h3><p>Star schemas and medallion layers.</p></div>
+        </li>
+        <li class="flow-step">
+          <span class="flow-node"><span class="flow-num" aria-hidden="true">4</span><svg aria-hidden="true"><use href="#i-clock"/></svg></span>
+          <div class="flow-card"><h3><span class="sr-only">Step 4: </span>Orchestrate</h3><p>Schedule and retry with Airflow and ADF.</p></div>
+        </li>
+        <li class="flow-step">
+          <span class="flow-node"><span class="flow-num" aria-hidden="true">5</span><svg aria-hidden="true"><use href="#i-dashboard"/></svg></span>
+          <div class="flow-card"><h3><span class="sr-only">Step 5: </span>Serve</h3><p>KPIs and dashboards in Power BI.</p></div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="panel screen p-exp" id="experience" aria-labelledby="experience-title">
+      <div class="flow-head">
+        <p class="eyebrow-line">My Journey</p>
+        <h2 class="skills-title" id="experience-title">Experience &amp; <span class="accent">Education</span></h2>
+        <p class="skills-lead">Where I&rsquo;ve built, studied, and kept learning along the way.</p>
+      </div>
+      <ol class="journey">
+        <li class="j-card">
+          <span class="j-dot" aria-hidden="true"></span>
+          <div class="j-top"><span class="sk-tile"><svg aria-hidden="true"><use href="#i-briefcase"/></svg></span><span class="j-date">2026</span></div>
+          <p class="j-kind">Experience</p>
+          <h3>Co-founder — Student Software Startup</h3>
+          <ul class="j-points">
+            <li>Delivered a production POS and student order management system for a real client (May 2026).</li>
+            <li>Participated in requirements gathering, development, testing, deployment, and client handover.</li>
+          </ul>
+        </li>
+        <li class="j-card">
+          <span class="j-dot" aria-hidden="true"></span>
+          <div class="j-top"><span class="sk-tile"><svg aria-hidden="true"><use href="#i-cap"/></svg></span><span class="j-date">2024 – 2028</span></div>
+          <p class="j-kind">Education</p>
+          <h3>BSc (Hons) Information Technology, Specialization in Data Science</h3>
+          <p class="j-org"><svg aria-hidden="true"><use href="#i-uni"/></svg>Sri Lanka Institute of Information Technology (SLIIT)</p>
+        </li>
+        <li class="j-card">
+          <span class="j-dot" aria-hidden="true"></span>
+          <div class="j-top"><span class="sk-tile"><svg aria-hidden="true"><use href="#i-award"/></svg></span><span class="j-date">Certificates</span></div>
+          <p class="j-kind">Learning</p>
+          <h3>Recent Certificates</h3>
+          <ul class="j-certs">
+            <li><svg aria-hidden="true"><use href="#i-check-circle"/></svg><span><strong>Python for Beginners</strong>UOM</span></li>
+            <li><svg aria-hidden="true"><use href="#i-check-circle"/></svg><span><strong>Data Analysis</strong>Microsoft Simplelearn</span></li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="panel screen p-contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact-copy">
+        <p class="eyebrow-line">Let&rsquo;s Connect</p>
+        <h2 class="skills-title" id="contact-title">Get In <span class="accent">Touch</span></h2>
+        <p class="skills-lead">I'm open to Data Engineering internships and collaborative data projects. Whether you have a role in mind or just want to talk data, my inbox is always open.</p>
+        <ul class="contact-list">
+          <li><span class="sk-tile"><svg aria-hidden="true"><use href="#i-mail"/></svg></span><span class="c-text"><span class="c-label">Email</span><a href="mailto:manivannanmathusan7@gmail.com">manivannanmathusan7@gmail.com</a></span></li>
+          <li><span class="sk-tile"><svg aria-hidden="true"><use href="#i-phone"/></svg></span><span class="c-text"><span class="c-label">Phone</span><a href="tel:+94718813479">+94 71 881 3479</a></span></li>
+          <li><span class="sk-tile"><svg aria-hidden="true"><use href="#i-linkedin"/></svg></span><span class="c-text"><span class="c-label">LinkedIn</span><a href="https://www.linkedin.com/in/mathusan-manivannan-b94190403/" target="_blank" rel="noopener noreferrer">linkedin.com/in/mathusan-manivannan</a></span></li>
+          <li><span class="sk-tile"><svg aria-hidden="true"><use href="#i-github"/></svg></span><span class="c-text"><span class="c-label">GitHub</span><a href="https://github.com/Mathusan1216" target="_blank" rel="noopener noreferrer">github.com/Mathusan1216</a></span></li>
+          <li><span class="sk-tile"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><span class="c-text"><span class="c-label">Location</span><span>Kilinochchi, Sri Lanka</span></span></li>
+        </ul>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:manivannanmathusan7@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-send"/></svg>Email Me</a>
+          <a class="btn btn-outline" href="assets/cv.pdf" download="Mathusan-Manivannan-CV.pdf"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Download CV</a>
+        </div>
+      </div>
+      <div class="contact-art" aria-hidden="true">
+        <svg viewBox="0 0 360 320">
+          <defs>
+            <linearGradient id="lg-plane" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B5DAFF"/><stop offset="1" stop-color="#2E8BFF"/></linearGradient>
+            <radialGradient id="rg-orb" cx=".5" cy=".45" r=".55"><stop offset="0" stop-color="#173A73"/><stop offset="1" stop-color="#0A1630"/></radialGradient>
+            <filter id="f-glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <circle cx="180" cy="165" r="148" fill="none" stroke="#3D95FF" stroke-opacity=".18"/>
+          <circle class="orbit" cx="180" cy="165" r="148" fill="none" stroke="#5AB0FF" stroke-width="3" stroke-linecap="round" stroke-dasharray="70 860"/>
+          <circle cx="180" cy="165" r="118" fill="url(#rg-orb)" stroke="#3D95FF" stroke-opacity=".55" stroke-width="1.5"/>
+          <circle cx="180" cy="165" r="118" fill="none" stroke="#3D95FF" stroke-opacity=".35" stroke-dasharray="3 9"/>
+          <g fill="#5AB0FF"><circle cx="40" cy="90" r="3"/><circle cx="330" cy="250" r="3.5"/><circle cx="300" cy="40" r="2.5"/><circle cx="60" cy="280" r="2"/></g>
+          <path d="M44 250c40-8 74-36 104-62" fill="none" stroke="#5AB0FF" stroke-width="2.2" stroke-dasharray="7 7" stroke-linecap="round"/>
+          <g class="plane" filter="url(#f-glow)">
+            <path d="M310 70 130 150l62 22Z" fill="url(#lg-plane)"/>
+            <path d="M310 70 192 172l10 58 30-40Z" fill="#1668D9"/>
+            <path d="M310 70 192 172l10 58" fill="none" stroke="#B5DAFF" stroke-width="1.5"/>
+          </g>
+          <g transform="rotate(-12 110 100)">
+            <rect x="76" y="78" width="70" height="50" rx="9" fill="#123064" stroke="#5AB0FF" stroke-width="1.5"/>
+            <path d="m80 84 31 22 31-22" fill="none" stroke="#B5DAFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </svg>
+        <p class="contact-note"><span class="note-dot"></span>Open to internships &amp; collaborations</p>
+      </div>
+    </section>
+
+  </main>
+  <nav class="dots" aria-label="Sections">
+    <a href="#home"><span class="sr-only">Home</span></a>
+    <a href="#about"><span class="sr-only">About</span></a>
+    <a href="#skills"><span class="sr-only">Skills</span></a>
+    <a href="#projects"><span class="sr-only">Projects</span></a>
+    <a href="#workflow"><span class="sr-only">Workflow</span></a>
+    <a href="#experience"><span class="sr-only">Experience</span></a>
+    <a href="#contact"><span class="sr-only">Contact</span></a>
+  </nav>
+
+  <footer class="site-footer">
+    <div class="board-width footer-inner">
+      <p>© 2026 Mathusan Manivannan</p>
+      <a href="#home" class="to-top">Back to top<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

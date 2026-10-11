@@ -9,7 +9,7 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 export const metadata: Metadata = {
   title: "Mathusan Manivannan | Data Science Portfolio",
   description:
-    "Personal portfolio of Mathusan Manivannan — data science student, ML enthusiast, and aspiring data engineer.",
+    "Portfolio of Mathusan Manivannan, a BSc (Hons) Information Technology undergraduate at SLIIT specialising in Data Science. Machine learning, recommendation systems, and full-stack projects.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

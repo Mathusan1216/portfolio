@@ -1,32 +1,34 @@
 const facts = [
   { label: "Name", value: "Mathusan Manivannan" },
-  { label: "Degree", value: "BSc (Hons) in Information Technology" },
+  { label: "Degree", value: "BSc (Hons) Information Technology" },
   { label: "Specialization", value: "Data Science" },
   { label: "University", value: "SLIIT" },
   { label: "GPA", value: "3.172" },
+  { label: "Location", value: "Kilinochchi, Sri Lanka" },
+  { label: "Status", value: "2024 – Present" },
   { label: "Available", value: "Open to Internships" },
 ];
 
 const timeline = [
   {
-    year: "2022",
-    title: "Started B.Sc. CS",
-    desc: "Enrolled in Computer Science with Data Science track.",
-  },
-  {
-    year: "2023",
-    title: "First Kaggle Top 10%",
-    desc: "Placed in top 10% on Titanic & House Prices competitions.",
-  },
-  {
     year: "2024",
-    title: "Research Intern",
-    desc: "ML research internship focused on NLP and information extraction.",
+    title: "Started BSc (Hons) IT at SLIIT",
+    desc: "Enrolled at Sri Lanka Institute of Information Technology, specialising in Data Science.",
   },
   {
     year: "2025",
-    title: "Open Source Contributor",
-    desc: "Merged PRs to pandas & scikit-learn documentation.",
+    title: "Student Stress Level Predictor",
+    desc: "Built and compared multiple classification models to predict student stress levels from academic and lifestyle data.",
+  },
+  {
+    year: "2026",
+    title: "StaySync AI",
+    desc: "Team project: a smart student living platform with room recommendations, food discovery, and AI-driven budgeting.",
+  },
+  {
+    year: "2026",
+    title: "Client POS & Fraud Detection",
+    desc: "Delivered a full-stack POS and student order system for a real client, and built a fake job posting detector.",
   },
 ];
 
@@ -54,19 +56,20 @@ export default function About() {
               </svg>
             </div>
             <h3 className="text-2xl font-semibold text-highlight mb-4">
-              Data Scientist in the Making
+              Data Science Undergraduate &amp; Builder
             </h3>
             <p className="text-muted leading-relaxed mb-5">
-              I&apos;m a third-year Computer Science student specialising in Data
-              Science. My work sits at the intersection of statistics, software
-              engineering, and domain knowledge — I love turning messy, real-world
-              datasets into clean, actionable stories.
+              I&apos;m a BSc (Hons) Information Technology undergraduate at SLIIT,
+              specialising in Data Science since 2024. I&apos;m interested in
+              building practical software applications, AI/ML solutions, and
+              data-driven systems that solve real problems.
             </p>
             <p className="text-muted leading-relaxed mb-10">
-              Outside of coursework I compete on Kaggle, read papers on arXiv, and
-              occasionally write posts explaining ML concepts to beginners. When the
-              laptop is closed, you&apos;ll find me bouldering or hunting for great
-              ramen.
+              I enjoy turning ideas into working projects. My work so far spans
+              machine learning classifiers, recommendation systems, full-stack web
+              applications, database-backed systems, and a production POS system
+              delivered for a real client. I approach technology with an
+              entrepreneurial mindset and a focus on shipping things that matter.
             </p>
 
             {/* Facts grid */}
@@ -93,14 +96,31 @@ export default function About() {
             </a>
           </div>
 
-          {/* Right — timeline */}
+          {/* Right — education + timeline */}
           <div>
+            <h3 className="text-lg font-semibold text-highlight mb-6 font-mono tracking-wide uppercase text-sm">
+              Education
+            </h3>
+            <div className="border border-accent/15 rounded-2xl bg-dark/50 p-6 mb-12">
+              <h4 className="text-body font-semibold">
+                BSc (Hons) Information Technology
+              </h4>
+              <p className="text-accent text-sm mt-1">Data Science Specialization</p>
+              <p className="text-muted text-sm mt-2">
+                SLIIT — Sri Lanka Institute of Information Technology
+              </p>
+              <div className="flex flex-wrap gap-x-6 gap-y-1 mt-3 text-xs font-mono text-muted">
+                <span>2024 – Present</span>
+                <span>GPA 3.172</span>
+              </div>
+            </div>
+
             <h3 className="text-lg font-semibold text-highlight mb-8 font-mono tracking-wide uppercase text-sm">
               Journey
             </h3>
             <div className="relative pl-8 border-l border-accent/30 space-y-10">
               {timeline.map((item) => (
-                <div key={item.year} className="relative group">
+                <div key={item.title} className="relative group">
                   {/* dot */}
                   <span className="absolute -left-[2.15rem] top-1 w-3 h-3 rounded-full bg-accent group-hover:bg-highlight ring-4 ring-surface transition-colors duration-200" />
                   <span className="font-mono text-accent text-xs tracking-widest uppercase">
